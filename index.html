@@ -1,0 +1,244 @@
+
+<!DOCTYPE="html">
+<html>
+<head>
+	<title>CSS Challenge</title>
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Arapey:400italic,400' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.simplemodal-1.4.4.js"></script>
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/jquery.validate.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			
+			$('#commentForm').validate();
+			
+			$('#contact').click(function() {
+				$("#cform").modal({
+					opacity:75,
+					overlayCss: {backgroundColor: "#000"},
+					onOpen: function (dialog) {
+						dialog.overlay.fadeIn('slow', function () {
+							dialog.data.hide();
+							dialog.container.fadeIn('slow', function () {
+								dialog.data.slideDown('slow');	 
+							});
+						});
+					},
+					onClose: function (dialog) {
+						dialog.data.fadeOut('slow', function () {
+							dialog.container.slideUp('slow', function () {
+								dialog.overlay.fadeOut('slow', function () {
+									$.modal.close();
+								});
+							});
+						});
+						}
+					}); //end modal
+				}); //end of contact click
+
+			$('#mapLink').hover(function() {
+				$('#map').modal({
+					opacity:75,
+					overlayCss: {backgroundColor: "#000"},
+					// onOpen: function (dialog) {
+					// 	dialog.overlay.fadeIn('slow', function () {
+					// 		dialog.data.hide();
+					// 		dialog.container.fadeIn('slow', function () {
+					// 			dialog.data.slideDown('slow');	 
+					// 		});
+					// 	});
+					// },
+					onClose: function (dialog) {
+						dialog.data.fadeOut('slow', function () {
+							dialog.container.slideUp('slow', function () {
+								dialog.overlay.fadeOut('slow', function () {
+									$.modal.close();
+								});
+							});
+						});
+						}
+					});
+			}); // end of map hover
+		}); //end document ready
+	</script>
+</head>
+<body>
+	<header>
+		<div id="top">
+			<div id="logo">
+				<h1><img src="img/logo.png" alt="CSS-CHALLENGE"/></h1>
+			</div>
+			<div id="welcome">
+				<h2 style="color: white; padding-top: 30px;">Welcome to your first full page web</br>
+				layout CSS challenge.</h2>
+			</div>
+			<div style="clear: both;"></div>
+		</div><!--/top-->
+		<nav>
+			<ul id="menu">
+				<li>
+					<a href="#">HOME</a>
+				</li>
+				<li>
+					<a href="#">ABOUT</a>
+				</li>
+				<li>
+					<a href="#">SERVICES</a>
+				</li>
+				<li>
+					<a href="#">BLOG</a>
+				</li>
+				<li>
+					<a href="#">PROJECTS</a>
+				</li>
+				<li>
+					<a id="contact" href="#">CONTACT</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div id="container">
+		<div id="one">
+			<div id="fav">Your favorite CSS</br>
+			attributes altogether</div>
+		</div><!--/one-->
+		<div id="two">
+			<div class="banner">
+				<div class="pic">
+				<img src="img/banner-img01.jpg" alt="banner1"/>
+				<h6>DETAILS</h6>
+				</div>
+				<section class="txt">
+				<h3 class="white">Planning</h3>
+				<p>Praesent accumsan lacinia odio, at scelerisque nibh malesuada ac. In ut lorem dui. Duis suscipit accumsan eros...</p>
+				</section>
+			</div>
+			<div class="banner">
+				<div class="pic">
+				<img src="img/banner-img01.jpg" alt="banner1"/>
+				<h6>DETAILS</h6>
+				</div>
+				<section class="txt">
+				<h3 class="white">Coding</h3>
+				<p>Duis tempor iaculis est in congue. Integer at facilisis massa. Nullam pretium odio dignissim ipsum bibendum eu...</p>
+				</section>
+			</div>
+			<div class="banner">
+				<div class="pic">
+				<img src="img/banner-img01.jpg" alt="banner1"/>
+				<h6>DETAILS</h6>
+				</div>
+				<section class="txt">
+				<h3 class="white">Optimize</h3>
+				<p>In eu justo augue, nec cursus risus. Fusce arcu risus, dignissim ut porttitor eu, convallis semper risus...</p>
+				</section>
+			</div>
+		<div style="clear: both;"><!--GREAT-COLLAPSE--></div>
+		</div><!--/two-->
+		<div id="three">
+			<div id="highlights">
+				<div id="title">
+					<h3 style="color: white; font-size: 24px;">HIGHLIGHTS</h3>
+				</div><!--title"-->
+				<div class="date">
+					<div class="lilpic">
+						<img src="img/date-bg.png" alt="date"/>
+					</div><!--/lilpic-->
+					<div class="lil">
+						<h5 class="caps">Aenean mauris lacus, fringilla id.</h5>
+					</div><!--/lil-->
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut iaculis dui nec diam accumsan tempus...</p>
+					<h5 class="blue it">Read Details</h5>
+				</div><!--date-->
+				<div class="date">
+					<div class="lilpic">
+						<img src="img/date-bg.png" alt="date"/>
+					</div><!--/lilpic-->
+					<div class="lil">
+						<h5 class="caps">Aenean mauris lacus, fringilla id.</h5>
+					</div><!--/lil-->
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut iaculis dui nec diam accumsan tempus...</p>
+					<h5 class="blue it">Read Details</h5>
+				</div><!--date-->
+				<div class="date">
+					<div class="lilpic">
+						<img src="img/date-bg.png" alt="date"/>
+					</div><!--/lilpic-->
+					<div class="lil">
+						<h5 class="caps">Aenean mauris lacus, fringilla id.</h5>
+					</div><!--/lil-->
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut iaculis dui nec diam accumsan tempus...</p>
+					<h5 class="blue it">Read Details</h5>
+				</div><!--date-->
+			</div><!--highlights-->
+			<div id="creative">
+				<div id="bigpic">
+				<img src="img/home-img.jpg" alt="bigpic"/>
+				</div>
+				<section id="words">
+				<h3>Creative Design Ideas</h3>
+				<h5 class="caps">Mauris in ligula mauris. Cras aliquam pellentesque dolor quis tincidunt. Donec est nunc, eleifend nec tempus sed.</h5>
+				<p>Integer neque urna, bibendum ut elementum quis, dignissim pellentesque mi. Donec facilisis ultrices risus, a blandit felis dictum quis. In neque risus, placerat ac pellentesque ac, tempor eu justo. Cras sed purus mauris. Quisque id lacus risus. Nam vel orci sit amet diam placerat vehicula. Duis ut augue ante, in dapibus eros.</p>
+				</section>
+			</div><!--creative-->
+			<div id="popular">
+				<div id="first">
+				<h3>Popular Posts</h3>
+				<h5 class="it">Aliquam lectus dolor, mollis sed tempor eu, fringilla at magna.</h5>
+				<p>Morbi nisi lectus, cursus ut sagittis non, hendrerit eget velit. Sed at sem enim, in lacinia sem. Donec nisi dui, blandit eu ullamcorper pharetra, pretium sed felis.</p>
+				<p class="black">By: <span class="blue">Admin</p>
+				</div>
+				<div id="second">
+				<h5 class="it">Sed id est ullamcorper nulla sagittis tristique et lobortis neque.</h5>
+				<p>Cras odio enim, posuere ac rhoncus a, venenatis gravida leo. Mauris semper dignissim augue sit amet pharetra. Praesent tincidunt, urna et convallis volutpat, odio eros sollicitudin erat, et ornare elit lectus a nibh.</p>
+				<p class="black">By: <span class="blue">Admin</p>
+				</div>
+			</div><!--popular-->
+			<div id="new">
+				<h3>New Perspectives In Design</h3>
+				<h5 class="blue it">Curabitur malesuada, nunc a eleifend suscipit, erat arcu lobortis felis, non sodales est sem ut risus.</h5>
+				<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce dictum, odio quis iaculis fringilla, diam metus tincidunt urna, non feugiat turpis nisi id orci. Mauris hendrerit orci quis nibh imperdiet at egestas eros venenatis. Nunc viverra, erat non suscipit vestibulum, leo libero vestibulum felis, eget ultrices odio ipsum auctor risus. Nunc fringilla erat sit amet lorem fermentum in congue enim porttitor.</p>
+			</br><h6 id="down">DETAILS</h6>
+			</div><!--new-->
+		</div><!--/three-->
+		<div style="clear: both;"><!--GREAT-COLLAPSE--></div>
+	</div><!--/container-->
+	<footer>
+	<h2>CSS challenge by <span class="blue">Adam Scott</span></h2>
+	
+	<p><a href="#" id="mapLink">Nashville Business Incubation Center, 315 10th Ave N, Nashville, TN</a></p>
+	
+	<div id="map">
+		<iframe width="765" height="630" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Nashville+Business+Incubation,+10th+Avenue+North,+Nashville,+TN&amp;aq=0&amp;oq=nashville+busin&amp;sll=35.830521,-85.978599&amp;sspn=2.306868,4.301147&amp;ie=UTF8&amp;hq=Nashville+Business+Incubation,&amp;hnear=10th+Ave+N,+Nashville,+Davidson,+Tennessee&amp;ll=36.162392,-86.787611&amp;spn=0.035893,0.067205&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=15037382944469271344&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Nashville+Business+Incubation,+10th+Avenue+North,+Nashville,+TN&amp;aq=0&amp;oq=nashville+busin&amp;sll=35.830521,-85.978599&amp;sspn=2.306868,4.301147&amp;ie=UTF8&amp;hq=Nashville+Business+Incubation,&amp;hnear=10th+Ave+N,+Nashville,+Davidson,+Tennessee&amp;ll=36.162392,-86.787611&amp;spn=0.035893,0.067205&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=15037382944469271344" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+	</div>
+	
+	<div id="cform">
+		<form class="cmxform" id="commentForm" method="get" action="">
+		 <fieldset>
+		   <legend>Contact</legend>
+		   <p>
+		     <label for="cname">Name</label>
+		     <em>*</em>&nbsp<input id="cname" name="name" size="25" class="required" minlength="2" />
+		   </p>
+		   <p>
+		     <label for="cemail">E-Mail</label>
+		     <em>*</em>&nbsp<input id="cemail" name="email" size="25"  class="required email" />
+		   </p>
+		   <p>
+		     <label for="curl">URL</label>
+		     <em>  </em>&nbsp<input id="curl" name="url" size="25"  class="url" value="" />
+		   </p>
+		   <p>
+		     <label for="ccomment">Your comment</label>
+		     <em>*</em>&nbsp<textarea id="ccomment" name="comment" cols="22"  class="required"></textarea>
+		   </p>
+		   <p>
+		     <input class="submit" type="submit" value="Submit"/>
+		   </p>
+		 </fieldset>
+		 </form>
+	</div>
+	</footer>
+</body>
+</html>
